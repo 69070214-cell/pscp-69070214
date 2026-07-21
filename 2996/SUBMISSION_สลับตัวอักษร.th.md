@@ -15,13 +15,13 @@
 หมายเลข/ชื่อโจทย์ OJ:
 
 ```text
-
+2996 สลับตัวอักษร
 ```
 
 OJ submission ID ถ้ามีการส่งแล้ว:
 
 ```text
-
+542031
 ```
 
 สถานะ OJ:
@@ -33,7 +33,7 @@ Pass
 เวลาที่ใช้คิดและทำโจทย์ด้วยตนเอง:
 
 ```text
-
+0-15 minutes
 ```
 
 เลือกหนึ่งข้อ:
@@ -73,7 +73,9 @@ More than 4 weeks
 ถ้ายังไม่เข้าใจโจทย์ทั้งหมด ให้เขียนสิ่งที่เข้าใจในตอนนี้ ความเข้าใจอาจยังไม่ครบหรืออาจผิดได้ แต่ต้องพยายามอธิบายอย่างจริงใจ
 
 ```text
-
+input : รับชื่อเป็นstring มาเก็บไว้ในตัวแปรword 
+output : แสดงชื่อที่รับออกเป็นชื่อแบบเรียงตัวอักษรจากตัวสุดท้ายมาตัวแรก
+constraints : outputที่แสดงออกมาจะต้องเป็นตัวพิมพ์เล็กทั้งหมดแม้ตอนรับinputจะเป็นพิมพ์ใหญ่ก็ตาม
 ```
 
 ---
@@ -93,9 +95,10 @@ More than 4 weeks
 สามารถเขียนเป็น pseudocode, flowchart idea หรือขั้นตอนความคิดได้
 
 ```text
-Step 1:
-Step 2:
-Step 3:
+Step 1: กำหนดตัวแปรwordรับค่าชื่อที่ผู้ใช้พิมพ์เข้ามา
+Step 2:ใช้ word[::-1] เพื่อให้รันตัวอักษรในตัวแปรwordจากตัวหลังมาตัวหน้า
+Step 3:กำหนดตัวแปรnewwordเพื่อใช้เก็บค่าที่แปลงมาจากตัวแปรword
+Step 4:ใช้คำสั่งปริ้นnewwordเพื่อแสดงชื่อที่อ่านจากหลังมาหน้า และใช้ .lower() เพื่อให้แสดงเป็นพิมพ์เล็กทุกตัว เผื่อในกรณีผู้ใช้กรอกพิมพ์ใหญ่มา
 ```
 
 ---
@@ -115,7 +118,7 @@ Step 3:
 ห้ามคัดลอกคำอธิบายจากคนอื่น
 
 ```text
-
+เหมือนกับแผนแรก เพราะโค้ดกระชับและทำงานได้ตรงตามเงื่อนไขอยู่แล้ว
 ```
 
 ---
@@ -135,31 +138,31 @@ Step 3:
 ทำไมเลือก case นี้:
 
 ```text
-
+เพื่อจำลองในกรณีที่ผู้ใช้กรอกตัวอักษรเป็นพิมพ์ใหญ่ปนกับพิมพ์เล็ก
 ```
 
 Input:
 
 ```text
-
+aLiCE
 ```
 
 Expected output:
 
 ```text
-
+ecila
 ```
 
 Actual output:
 
 ```text
-
+ecila
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 2
@@ -167,31 +170,31 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+จำลองกรณีที่ผู้ใช้กรอกเฉพาะตัวพิมพ์ใหญ่
 ```
 
 Input:
 
 ```text
-
+SUSAN
 ```
 
 Expected output:
 
 ```text
-
+nasus
 ```
 
 Actual output:
 
 ```text
-
+nasus
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 3
@@ -199,31 +202,31 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+จำลองเวลาใส่สัญลักษณ์แทนตัวอักษร
 ```
 
 Input:
 
 ```text
-
+Jona$
 ```
 
 Expected output:
 
 ```text
-
+$anoj
 ```
 
 Actual output:
 
 ```text
-
+$anoj
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ---
@@ -233,7 +236,7 @@ Pass / Not Pass
 ใช้ AI กับโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช้ AI ต้องทำไฟล์นี้ด้วย:
@@ -251,7 +254,7 @@ ai_reflection.md
 ได้ถามเพื่อน TA ผู้สอน หรือบุคคลอื่นเพื่อขอความช่วยเหลือในโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช่ ให้อธิบายสั้น ๆ ว่าได้รับความช่วยเหลือแบบใด
@@ -305,10 +308,10 @@ No
 
 | Statement | Yes/No |
 |---|---|
-| I wrote this submission in my own words. | |
-| I understand my final code. | |
-| I recorded the real OJ status. | |
-| I did not copy AI-generated text directly into this file. | |
-| I did not copy code from another person. | |
-| If I received human help, I disclosed it in this file. | |
-| I submitted the final code to the OJ by myself. | |
+| I wrote this submission in my own words. |Yes|
+| I understand my final code. |Yes |
+| I recorded the real OJ status. |Yes |
+| I did not copy AI-generated text directly into this file. |Yes |
+| I did not copy code from another person. |Yes |
+| If I received human help, I disclosed it in this file. |Yes |
+| I submitted the final code to the OJ by myself. |Yes |
